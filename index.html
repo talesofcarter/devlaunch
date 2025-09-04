@@ -34,7 +34,7 @@
     <title>DevLaunch</title>
   </head>
   <body
-    class="bg-black min-h-screen p-4 transition-colors duration-300 dark:bg-gray-900"
+    class="bg-black min-h-screen px-40 transition-colors duration-300 dark:bg-gray-900"
   >
     <header
       class="w-full sticky top-0 bg-transparent rounded-xl p-6 transition-colors duration-300 dark:bg-gray-800 z-20"
@@ -58,12 +58,12 @@
 
         <!-- Navigation Links - Hidden below 1024px -->
         <ul
-          class="hidden lg:flex justify-between gap-8 xl:gap-10 absolute lg:static top-20 left-0 right-0 dark:bg-gray-800 p-6 lg:p-0 z-10 flex-col lg:flex-row transition-all duration-300"
+          class="hidden lg:flex justify-between gap-8 xl:gap-10 absolute lg:static top-20 left-0 w-1/2 lg:w-auto dark:bg-gray-800 p-6 lg:p-0 z-10 flex-col lg:flex-row transition-all duration-300 ease-in-out transform lg:transform-none -translate-x-full lg:translate-x-0"
           id="nav-menu"
         >
           <li class="group">
             <a
-              class="text-lg text-white hover:text-[var(--theme-color)] transition-colors duration-300 dark:text-gray-300 dark:hover:text-white"
+              class="text-lg text-gray-600 lg:text-white hover:text-[var(--theme-color)] transition-colors duration-300 dark:text-gray-300 dark:hover:text-white"
               href="#"
               >Home</a
             >
@@ -73,7 +73,7 @@
           </li>
           <li class="group">
             <a
-              class="text-lg text-white hover:text-[var(--theme-color)] transition-colors duration-300 dark:text-gray-300 dark:hover:text-white"
+              class="text-lg text-gray-600 lg:text-white hover:text-[var(--theme-color)] transition-colors duration-300 dark:text-gray-300 dark:hover:text-white"
               href="#"
               >Features</a
             >
@@ -83,7 +83,7 @@
           </li>
           <li class="group">
             <a
-              class="text-lg text-white hover:text-[var(--theme-color)] transition-colors duration-300 dark:text-gray-300 dark:hover:text-white"
+              class="text-lg text-gray-600 lg:text-white hover:text-[var(--theme-color)] transition-colors duration-300 dark:text-gray-300 dark:hover:text-white"
               href="#"
               >Testimonials</a
             >
@@ -93,7 +93,7 @@
           </li>
           <li class="group">
             <a
-              class="text-lg text-white hover:text-[var(--theme-color)] transition-colors duration-300 dark:text-gray-300 dark:hover:text-white"
+              class="text-lg text-gray-600 lg:text-white hover:text-[var(--theme-color)] transition-colors duration-300 dark:text-gray-300 dark:hover:text-white"
               href="#"
               >Pricing</a
             >
@@ -108,7 +108,7 @@
           <!-- Dark Mode Button - Always Visible -->
           <button
             id="themeToggle"
-            class="bg-gray-100 w-27 px-4 py-2 sm:px-5 sm:py-2.5 text-gray-700 rounded-lg cursor-pointer transition-colors duration-300 hover:bg-gray-200 flex items-center gap-2 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+            class="bg-white w-27 px-4 py-2 sm:px-5 sm:py-2.5 text-black rounded-lg cursor-pointer transition-colors duration-300 hover:bg-gray-200 flex items-center gap-2 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
           >
             <span id="icon"
               ><i class="fa-solid fa-moon"></i
@@ -127,24 +127,96 @@
 
           <!-- Hamburger Menu - Visible below 1024px -->
           <button
-            class="lg:hidden flex flex-col gap-1.5 p-2 rounded-md hover:bg-gray-100 transition-colors duration-300 dark:hover:bg-gray-700"
+            class="lg:hidden flex flex-col gap-1.5 p-2 rounded-md transition-colors duration-300 dark:hover:bg-gray-700 cursor-pointer"
             id="hamburger"
           >
             <div
-              class="w-6 h-0.5 bg-gray-600 dark:bg-gray-300"
+              class="w-6 h-0.5 bg-white dark:bg-gray-300"
             ></div>
             <div
-              class="w-6 h-0.5 bg-gray-600 dark:bg-gray-300"
+              class="w-6 h-0.5 bg-white dark:bg-gray-300"
             ></div>
             <div
-              class="w-6 h-0.5 bg-gray-600 dark:bg-gray-300"
+              class="w-6 h-0.5 bg-white dark:bg-gray-300"
             ></div>
           </button>
         </div>
       </nav>
     </header>
-    <main>
-      <section id="hero" class=""></section>
+    <main
+      class="w-full flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8"
+    >
+      <section id="hero" class="w-full text-center">
+        <div
+          class="inline-flex items-center justify-center gap-2 py-2 px-6 rounded-full border border-gray-700 bg-gray-800 bg-opacity-50 backdrop-blur-sm mb-6"
+        >
+          <div class="flex flex-row gap-1 my-1">
+            <img
+              src="src/assets/icons/star.svg"
+              alt="star"
+            />
+            <img
+              src="src/assets/icons/star.svg"
+              alt="star"
+            />
+            <img
+              src="src/assets/icons/star.svg"
+              alt="star"
+            />
+            <img
+              src="src/assets/icons/star.svg"
+              alt="star"
+            />
+            <img
+              src="src/assets/icons/star.svg"
+              alt="star"
+            />
+          </div>
+          <h5 class="text-white text-sm font-semibold">
+            4.5 | 2.3k+ Reviews
+          </h5>
+        </div>
+        <h1
+          class="text-white text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight mb-4"
+        >
+          From Idea to
+          <span
+            class="inline-block px-3 py-1 font-mono text-xl sm:text-2xl rounded-lg bg-gray-800 text-[#adb5bd] shadow-lg shadow-green-900/20 whitespace-nowrap"
+            >npm install</span
+          >
+          in Seconds.
+          <span
+            class="block mt-4 md:inline-block px-4 text-white bg-gradient-to-r from-[#feb46f] to-[#fe9431] rounded-lg"
+            >DevLaunch</span
+          >: Your Project, Instantly.
+        </h1>
+        <p
+          class="text-gray-300 text-lg sm:text-xl font-medium max-w-2xl mx-auto mb-8"
+        >
+          Stop wasting time on setup. DevLaunch streamlines
+          your workflow, so you can start building, not
+          configuring.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4"
+        >
+          <button
+            class="bg-[var(--theme-color)] hover:bg-orange-600 text-white font-bold py-3 px-8 rounded transition-all duration-300 transform cursor-pointer"
+          >
+            Start Trial for 14 Days
+          </button>
+          <a
+            href="#features"
+            class="text-white hover:text-orange-500 font-bold py-3 px-8 rounded-full transition-colors duration-300"
+          >
+            Learn More &rarr;
+          </a>
+        </div>
+        <p class="text-gray-500 text-sm">
+          No credit card required. Cancel anytime.
+        </p>
+      </section>
     </main>
 
     <script type="module" src="src/scripts/app.js"></script>
