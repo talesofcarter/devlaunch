@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --theme-color: #fe9431;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-bg {
+  background-image: url("assets/images/banner-bg-8.PNG");
+  height: 100vh;
+}

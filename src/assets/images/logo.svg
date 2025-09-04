@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50" height="70" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title>Creative Abstract Logo</title>
+  <desc>Abstract white swirl/hexagon-like design on orange rounded background</desc>
+
+  <!-- Background with rounded corners -->
+  <rect x="0" y="0" width="256" height="256" rx="32" ry="32" fill="#fe9431"/>
+
+  <!-- Abstract swirl shape -->
+  <path d="M128 60 
+           C160 60, 196 92, 196 128 
+           C196 164, 164 196, 128 196 
+           C92 196, 60 164, 60 128 
+           C60 100, 84 80, 108 84 
+           C124 86, 136 100, 136 116 
+           C136 132, 124 144, 108 144 
+           C92 144, 84 132, 84 120" 
+        fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
