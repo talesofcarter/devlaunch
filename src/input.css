@@ -6,6 +6,8 @@
 
 body {
   font-family: "DM Sans", sans-serif;
-  padding: 0;
-  margin: 0;
+}
+
+.custom-margin {
+  margin-bottom: 100px;
 }
