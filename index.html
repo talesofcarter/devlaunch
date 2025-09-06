@@ -106,17 +106,20 @@
         <!-- Buttons Container -->
         <div class="flex items-center gap-4 sm:gap-6">
           <!-- Dark Mode Button - Always Visible -->
-          <button
+          <div
             id="themeToggle"
-            class="bg-white w-27 px-4 py-2 sm:px-5 sm:py-2.5 text-black rounded-lg cursor-pointer transition-colors duration-300 hover:bg-gray-200 flex items-center gap-2 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600"
+            class="w-27 flex gap-2 cursor-pointer"
           >
-            <span id="icon"
-              ><i class="fa-solid fa-moon"></i
-            ></span>
-            <span id="btnText" class="hidden sm:inline"
-              >Dark</span
+            <span id="icon">
+              <i class="fa-solid fa-moon text-white"></i>
+            </span>
+            <span
+              id="btnText"
+              class="hidden sm:inline text-white"
             >
-          </button>
+              Dark
+            </span>
+          </div>
 
           <!-- Signup Button - Hidden below 750px -->
           <button

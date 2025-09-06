@@ -13,7 +13,7 @@ export function themeToggle() {
             />`;
     } else {
       buttonText.textContent = "Dark";
-      icon.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+      icon.innerHTML = `<i class="fa-solid fa-moon text-white"></i>`;
     }
     isLight = !isLight;
   });
