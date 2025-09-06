@@ -7,7 +7,7 @@ export function generateTestimonials() {
 
   testimonials.forEach((testimony) => {
     testimonialsRender += `
-    <div class="relative bg-gray-950 p-8 rounded-2xl border border-gray-700 backdrop-blur-sm">
+    <div class="relative bg-transparent p-8 rounded-2xl border border-gray-700 backdrop-blur-sm">
         <div class="flex items-center gap-4 mb-4">
             <img
             class="w-16 h-16 rounded-full object-cover border-2 border-orange-500"
