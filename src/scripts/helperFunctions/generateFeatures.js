@@ -66,4 +66,5 @@ export function generateFeatures() {
     `;
   });
   featuresGrid.innerHTML = featuresGridRender;
+  console.log(featuresGrid);
 }
