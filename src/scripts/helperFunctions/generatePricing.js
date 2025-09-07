@@ -22,11 +22,12 @@ export function generatePricing(isAnnually) {
     const subPriceHTML = priceItem.features
       .map(
         (subPriceFeature) => `
-      <li class="flex flex-row gap-3 items-center">
+      <li class="flex items-start gap-2">
         <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
+        class="mt-1 flex-shrink-0"
         viewBox="0 0 24 24"
         fill="none"
         stroke="${isPro ? "#ffffff" : "#fe9431"}"
@@ -39,18 +40,18 @@ export function generatePricing(isAnnually) {
         />
         <path d="M22 4 12 14.01l-3-3" />
         </svg>
-          ${subPriceFeature}
+          <span class="text-base">${subPriceFeature}</span>
         </li>
       `
       )
       .join("");
 
     pricingGridRender += `
-        <div class="p-7 rounded-lg flex flex-col gap-4 ${cardClasses}">
+        <div class="p-7 rounded-lg flex flex-col gap-4 ${cardClasses} h-full">
             <h1 class="text-2xl font-extrabold">
             ${priceItem.category}
             </h1>
-            <p>
+            <p class="flex-grow">
             ${priceItem.description}
             </p>
 
@@ -67,7 +68,7 @@ export function generatePricing(isAnnually) {
             ${subPriceHTML}
             </ul>
             <button
-            class="${buttonClasses} py-4 rounded-lg font-bold flex flex-row items-center justify-center gap-3 mt-5 cursor-pointer transition-all duration-300 ease-out"
+            class="${buttonClasses} py-4 rounded-lg font-bold flex flex-row items-center justify-center gap-3 mt-auto cursor-pointer transition-all duration-300 ease-out"
             >
             Start Trial For 14 Days
             </button>
