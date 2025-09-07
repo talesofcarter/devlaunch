@@ -3,13 +3,21 @@ import { toggleHamburgerMenu } from "./helperFunctions/toggleHamburgerMenu.js";
 import { generateFeatures } from "./helperFunctions/generateFeatures.js";
 import { generateTestimonials } from "./helperFunctions/generateTestimonials.js";
 import { generatePricing } from "./helperFunctions/generatePricing.js";
-import { convertPriceAnnual } from "./helperFunctions/convertPriceAnnual.js";
+
+const billingToggle = document.getElementById(
+  "billing-toggle"
+);
 
 document.addEventListener("DOMContentLoaded", () => {
   themeToggle();
   toggleHamburgerMenu();
   generateFeatures();
   generateTestimonials();
-  generatePricing();
-  convertPriceAnnual();
+  generatePricing(false);
 });
+
+if (billingToggle) {
+  billingToggle.addEventListener("change", (event) => {
+    generatePricing(event.target.checked);
+  });
+}

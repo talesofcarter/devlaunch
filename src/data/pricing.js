@@ -3,7 +3,8 @@ export const pricing = [
     category: "Free",
     description:
       "Best for individual developers & students",
-    price: 0,
+    monthlyPrice: 0,
+    annualPrice: 0,
     features: [
       "5 projects per month",
       "One-Click Scaffolding",
@@ -17,7 +18,8 @@ export const pricing = [
   {
     category: "Pro",
     description: "Best suited for freelancers and startups",
-    price: 49,
+    monthlyPrice: 49,
+    annualPrice: 49 * 12 + 11,
     features: [
       "Unlimited projects",
       "Integrated toolchains",
@@ -30,7 +32,8 @@ export const pricing = [
   {
     category: "Enterprise",
     description: "Best suited for Organizations",
-    price: 99,
+    monthlyPrice: 99,
+    annualPrice: 99 * 12 + 11,
     features: [
       "Unlimited projects & users",
       "All Pro features, plus:",

@@ -1,10 +1,17 @@
 import { pricing } from "../../data/pricing.js";
-export function generatePricing() {
+export function generatePricing(isAnnually) {
   const pricingGrid =
     document.querySelector(".pricing-grid");
+  const billingToggle = document.getElementById(
+    "billing-toggle"
+  );
   let pricingGridRender = "";
 
   pricing.forEach((priceItem) => {
+    const price = isAnnually
+      ? priceItem.annualPrice
+      : priceItem.monthlyPrice;
+
     const subPriceHTML = priceItem.features
       .map(
         (subPriceFeature) => `
@@ -43,7 +50,7 @@ export function generatePricing() {
             <hr class="border-t-1 border-gray-900" />
 
             <div class="flex flex-row items-center">
-            <span id="priceNum" class="text-5xl font-bold">$${priceItem.price}</span>
+            <span id="priceNum" class="text-5xl font-bold">$${price}</span>
             <span>/month</span>
             </div>
 
