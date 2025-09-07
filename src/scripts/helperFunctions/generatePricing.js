@@ -2,6 +2,7 @@ import { pricing } from "../../data/pricing.js";
 export function generatePricing(isAnnually) {
   const pricingGrid =
     document.querySelector(".pricing-grid");
+  const duration = isAnnually ? "year" : "month";
 
   let pricingGridRender = "";
 
@@ -61,7 +62,7 @@ export function generatePricing(isAnnually) {
 
             <div class="flex flex-row items-center">
             <span id="priceNum" class="text-5xl font-bold">$${price}</span>
-            <span>/month</span>
+            <span>/${duration}</span>
             </div>
 
             <ul class="flex flex-col gap-5">

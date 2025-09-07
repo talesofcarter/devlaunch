@@ -1,4 +1,3 @@
-import { themeToggle } from "./helperFunctions/themeToggle.js";
 import { toggleHamburgerMenu } from "./helperFunctions/toggleHamburgerMenu.js";
 import { generateFeatures } from "./helperFunctions/generateFeatures.js";
 import { generateTestimonials } from "./helperFunctions/generateTestimonials.js";
@@ -9,7 +8,6 @@ const billingToggle = document.getElementById(
 );
 
 document.addEventListener("DOMContentLoaded", () => {
-  themeToggle();
   toggleHamburgerMenu();
   generateFeatures();
   generateTestimonials();
