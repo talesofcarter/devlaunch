@@ -24,7 +24,7 @@ DevLaunch is a modern SaaS solution with a sleek landing page that simplifies pr
 
 - **HTML5**: For the semantic structure of the application.
 
-- **Vite**: (Assumed based on project structure) A fast build tool that provides an excellent developer experience.
+- **Vite**: A fast build tool that provides an excellent developer experience.
 
 ## 📦 Installation and Usage
 
