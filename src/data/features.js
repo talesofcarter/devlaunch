@@ -28,7 +28,7 @@ export const features = [
     bulletFeatures: [
       "Jumpstarts development with a wide range of architectures",
       "Community-driven and constantly updated templates",
-      "Provides templates for common project types like blogs or e-commerce storefronts",
+      "Templates for common projects - e-commerce storefronts",
     ],
     icon: "src/assets/icons/layout-grid.svg",
   },

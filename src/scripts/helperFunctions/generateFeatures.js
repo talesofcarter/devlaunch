@@ -10,11 +10,12 @@ export function generateFeatures() {
     const subFeaturesHTML = feature.bulletFeatures
       .map(
         (subFeature) => `
-      <li class="flex items-start gap-4">
+      <li class="flex items-start gap-2">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
+            class="mt-1 flex-shrink-0"
             viewBox="0 0 24 24"
             fill="none"
             stroke="#fe9431"
@@ -66,5 +67,4 @@ export function generateFeatures() {
     `;
   });
   featuresGrid.innerHTML = featuresGridRender;
-  console.log(featuresGrid);
 }
