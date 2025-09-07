@@ -7,10 +7,10 @@ export function generateTestimonials() {
 
   testimonials.forEach((testimony) => {
     testimonialsRender += `
-    <div class="relative bg-transparent p-8 rounded-2xl border border-gray-700 backdrop-blur-sm">
+    <div class="relative bg-transparent p-8 rounded-2xl border border-gray-700 backdrop-blur-sm flex flex-col h-full">
         <div class="flex items-center gap-4 mb-4">
             <img
-            class="w-16 h-16 rounded-full object-cover border-2 border-orange-500"
+            class="w-16 h-16 rounded-full object-cover border-2 border-orange-500 flex-shrink-0"
             src=${testimony.portrait}
             alt="Sarah Chen"
             />
@@ -26,7 +26,7 @@ export function generateTestimonials() {
             </div>
         </div>
         <div
-            class="text-lg text-gray-300 mb-4"
+            class="text-lg text-gray-300 mb-4 flex-grow"
         >
             ${testimony.review}
         </div>

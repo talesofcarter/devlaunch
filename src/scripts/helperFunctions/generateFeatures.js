@@ -28,7 +28,7 @@ export function generateFeatures() {
             />
             <path d="M22 4 12 14.01l-3-3" />
         </svg>
-        <p class="text-gray-300">
+        <p class="text-gray-300 text-base">
             ${subFeature}
         </p>
         </li>
@@ -38,8 +38,8 @@ export function generateFeatures() {
 
     featuresGridRender += `
   
-    <div class="text-white md:order-1">
-        <div class="p-8 rounded-2xl border border-gray-900 backdrop-blur-sm mb-6">
+    <div class="text-white">
+        <div class="p-8 rounded-2xl border border-gray-900 backdrop-blur-sm mb-6 h-full flex flex-col">
             <div class="flex items-center gap-4 mb-4">
                 <div class="p-3 rounded-full bg-[var(--theme-color)]">
                     <img
@@ -52,7 +52,7 @@ export function generateFeatures() {
                     ${feature.feature}
                 </h2>
                 </div>
-                  <p class="text-gray-300 text-base mb-6">
+                  <p class="text-gray-300 text-base mb-6 flex-grow">
                     ${feature.description}
                   </p>
 
