@@ -2,15 +2,22 @@ import { pricing } from "../../data/pricing.js";
 export function generatePricing(isAnnually) {
   const pricingGrid =
     document.querySelector(".pricing-grid");
-  const billingToggle = document.getElementById(
-    "billing-toggle"
-  );
+
   let pricingGridRender = "";
 
   pricing.forEach((priceItem) => {
     const price = isAnnually
       ? priceItem.annualPrice
       : priceItem.monthlyPrice;
+
+    const isPro = priceItem.category === "Pro";
+    const cardClasses = isPro
+      ? "bg-[#fc7e08] text-white relative z-10 transition-all duration-300 transform scale-105"
+      : "bg-transparent text-white border border-gray-700";
+
+    const buttonClasses = isPro
+      ? "bg-white text-[var(--theme-color)] hover:bg-gray-200"
+      : "bg-[var(--theme-color)] hover:bg-[var(--theme-dark)]";
 
     const subPriceHTML = priceItem.features
       .map(
@@ -22,7 +29,7 @@ export function generatePricing(isAnnually) {
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#fe9431"
+        stroke="${isPro ? "#ffffff" : "#fe9431"}"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -39,7 +46,7 @@ export function generatePricing(isAnnually) {
       .join("");
 
     pricingGridRender += `
-        <div class="border border-gray-900 p-7 rounded-lg flex flex-col gap-4">
+        <div class="p-7 rounded-lg flex flex-col gap-4 ${cardClasses}">
             <h1 class="text-2xl font-extrabold">
             ${priceItem.category}
             </h1>
@@ -47,7 +54,9 @@ export function generatePricing(isAnnually) {
             ${priceItem.description}
             </p>
 
-            <hr class="border-t-1 border-gray-900" />
+            <hr class="border-t-1 ${
+              isPro ? "border-white" : "border-gray-900"
+            }" />
 
             <div class="flex flex-row items-center">
             <span id="priceNum" class="text-5xl font-bold">$${price}</span>
@@ -58,7 +67,7 @@ export function generatePricing(isAnnually) {
             ${subPriceHTML}
             </ul>
             <button
-            class="bg-[var(--theme-color)] py-4 rounded-lg font-bold flex flex-row items-center justify-center gap-3 mt-5 cursor-pointer hover:bg-[var(--theme-dark)] transition-all duration-300 ease-out"
+            class="${buttonClasses} py-4 rounded-lg font-bold flex flex-row items-center justify-center gap-3 mt-5 cursor-pointer transition-all duration-300 ease-out"
             >
             Start Trial For 14 Days
             </button>
